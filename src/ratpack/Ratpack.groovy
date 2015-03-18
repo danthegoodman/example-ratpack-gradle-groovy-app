@@ -1,6 +1,7 @@
 import ratpack.example.groovywebconsole.ReloadingThing
 import ratpack.example.groovywebconsole.ScriptExecutionModule
 import ratpack.example.groovywebconsole.ScriptExecutor
+import ratpack.codahale.metrics.CodaHaleMetricsModule
 import ratpack.form.Form
 import ratpack.groovy.template.TextTemplateModule
 
@@ -11,6 +12,7 @@ ratpack {
 
     bindings {
         add new ScriptExecutionModule()
+        add new CodaHaleMetricsModule()
         add(TextTemplateModule) { TextTemplateModule.Config config -> config.staticallyCompile = true }
     }
 

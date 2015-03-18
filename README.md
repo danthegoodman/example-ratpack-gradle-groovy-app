@@ -1,3 +1,13 @@
+### This is a broken fork to demonstrate an issue.
+
+To reproduce it, run:
+
+```text
+./gradle runShadow
+```
+
+---
+
 This is an example Ratpack app, based on the latest ([Netty](http://netty.io)-powered) version. It is a subset port of the [Groovy Console](http://groovyconsole.appspot.com/).
 
 It is also using the Ratpack Gradle plugin as the development environment.

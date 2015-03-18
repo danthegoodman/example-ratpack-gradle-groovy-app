@@ -5,10 +5,12 @@ buildscript {
     }
     dependencies {
         classpath 'io.ratpack:ratpack-gradle:0.9.14'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.0.2'
     }
 }
 
 apply plugin: "io.ratpack.ratpack-groovy"
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: "idea"
 apply plugin: "eclipse"
 
@@ -37,6 +39,8 @@ configurations.all {
 }
 
 dependencies {
+    compile ratpack.dependency('codahale-metrics')
+
     // SpringLoaded enables runtime hot reloading.
     // It is not part of the app runtime and is not shipped in the distribution.
     // springloaded "org.springframework:springloaded:1.2.1.RELEASE"
